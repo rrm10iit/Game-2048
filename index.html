@@ -2,23 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Document</title>
-    
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
+ <script src="script.js" type="module"></script>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
+  
 </head>
 <body>
   <section class="Title">
     <h1>Game 2048</h1>
-    <h4>Use Keyboard arrow keys to Play</h4>
+    <h4>Use Keyboard arrow keys to Play or the Buttons given:</h4>
   </section>
   <section class="game-body">
     <div id="game-board">
   </div>
   </section>
-  
+  <section class="Buttons" id="button">
+    <div>
+     <button class="blank"></button>
+     <button class="ArrowUp"><i class="ArrowUp fa-solid fa-arrow-up"></i></button>
+     <button class="blank"> </button>  
+   </div>
+    <div><button class="ArrowLeft"><i class="ArrowLeft fa-solid fa-arrow-left"></i></button>
+    <button class="blank"> </button>
+    <button class="ArrowRight"><i class="ArrowRight fa-solid fa-arrow-right"></i></button>  
+  </div>
+    <div><button class="blank"> </button>
+    <button class="ArrowDown"><i class="ArrowDown fa-solid fa-arrow-down"></i></button>
+    <button class="blank"> </button>  
+  </div>
+    
+  </section>
 
 </body>
 </html>

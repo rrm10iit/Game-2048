@@ -3,6 +3,9 @@ import Tile from "./Tile.js"
 
 const gameBoard = document.getElementById("game-board")
 
+const button = document.getElementById(".button")
+const button1 = document.getElementById(".button1")
+
 const grid = new Grid(gameBoard)
 
 grid.randomEmptyCell().tile = new Tile(gameBoard)
@@ -12,12 +15,19 @@ setupInput()
 
 
 function setupInput() {
-  window.addEventListener("keydown", handleInput, { once: true })
+ window.addEventListener('click', handleInput, { once: true })
+ window.addEventListener('keydown', handleInput, { once: true })
 }
 
  async function  handleInput(e){
-
-  switch(e.key){
+  const t = e.type
+  let x
+if(e.type == "click"){
+   x = e.target.classList[0]
+}else{
+   x = e.key
+}
+  switch(x){
     case "ArrowUp":
       if(!canMoveUp()){
         setupInput()
